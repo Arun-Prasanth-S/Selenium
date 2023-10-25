@@ -18,7 +18,7 @@ public class Loginpage extends Baseclass {
 	
 	public void login(String name) {
 		btnclick(locator.getFindL());
-		//btnclick(locator.getSignInbtn());
+		btnclick(locator.getSignInbtn());
 		enterText(locator.getSignInbtn(), name);
 		btnclick(locator.getcontinu());
 		
