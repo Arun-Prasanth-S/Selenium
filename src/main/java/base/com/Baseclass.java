@@ -147,5 +147,25 @@ public class Baseclass {
 		Select s = new Select(element);
 		s.deselectByValue(data);
 	}
+	public void acceptAlert() {
+		Alert alert = driver.switchTo().alert();
+		log("Alert text is: "+alert.getText());
+		alert.accept();
+	}
+	private void log(String string) {
+		System.out.println(string);
+	}
+
+	public void dismissAlert() {
+		Alert alert = driver.switchTo().alert();
+		log("Alert text is: "+alert.getText());
+		alert.dismiss();
+	}
+
+	public void typeInAlert(String text) {
+		Alert alert = driver.switchTo().alert();
+		log("Alert text is: "+alert.getText());
+		alert.sendKeys(text);
+	}
 
 }
